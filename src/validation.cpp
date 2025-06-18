@@ -1939,18 +1939,44 @@ PackageMempoolAcceptResult ProcessNewPackage(Chainstate& active_chainstate, CTxM
     return result;
 }
 
+// MODIFICATION OF THE 100 CYCLES START
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
-    int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
-    // Force block reward to zero when right shift is undefined.
-    if (halvings >= 64)
-        return 0;
+   // Original Bitcoin logic for the first ~132 years
+   int original_halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
+   if (original_halvings < 33) {
+       // Force block reward to zero when right shift is undefined.
+       if (original_halvings >= 64)
+           return 0;
+           
+       CAmount nSubsidy = 50 * COIN;
+       nSubsidy >>= original_halvings;
+       return nSubsidy;
+   }
 
-    CAmount nSubsidy = 50 * COIN;
-    // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
-    nSubsidy >>= halvings;
-    return nSubsidy;
+   // --- FROM HERE, THE NEW "PICOIN" ERA BEGINS ---
+   // Block height subtracted from the beginning of the new era
+   int nHeight_new_era = nHeight - (33 * consensusParams.nSubsidyHalvingInterval);
+
+   // Total limit of 100 new cycles
+   int total_new_blocks_limit = 100 * 33 * consensusParams.nSubsidyHalvingInterval;
+   if (nHeight_new_era >= total_new_blocks_limit) {
+       return 0;
+   }
+   
+   // Calculate the halving within the new era
+   int new_halvings = (nHeight_new_era / consensusParams.nSubsidyHalvingInterval) % 33;
+
+   // Additional protection for the new era as well
+   if (new_halvings >= 64)
+       return 0;
+
+   CAmount nSubsidy = 50 * COIN;
+   nSubsidy >>= new_halvings;
+   
+   return nSubsidy;
 }
+// MODIFICATION OF THE 100 CYCLES END
 
 CoinsViews::CoinsViews(DBParams db_params, CoinsViewOptions options)
     : m_dbview{std::move(db_params), std::move(options)},
