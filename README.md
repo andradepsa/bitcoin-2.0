@@ -39,7 +39,7 @@ At the end of the original cycle in 2140, when Bitcoin would be fated to begin i
 
 By solving the problem of monetary entropy, Bitcoin 2.0 transforms Satoshi's original promise into an enduring reality.
 
-- **✅ Longevity Guaranteed:** From a system fated to petrify, to a network designed to last for over 100 human generations.
+- **✅ Longevity Guaranteed:** From a system fated to petrify, to a network designed to last for over 100 Cycles.
 - **✅ Constant Liquidity:** Ensures Bitcoin remains a functional, circulating asset, not just a digital museum curiosity.
 - **✅ Unshakable Security:** Provides a clear and predictable "security budget" for miners, eliminating the uncertainty of the fee market.
 - **✅ Stability for the Future:** Creates a monetary base that can reliably serve the economy of our descendants for millennia.
