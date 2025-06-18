@@ -49,3 +49,9 @@ By solving the problem of monetary entropy, Bitcoin 2.0 transforms Satoshi's ori
 The original Bitcoin showed us the path. Bitcoin 2.0 ensures there is a path to follow.
 
 **We are not changing Bitcoin. We are ensuring it has a future.**
+
+---
+
+## 🌐 Learn More
+
+**Project Website:** [https://k10.netlify.app/recursos/picoin](https://k10.netlify.app/recursos/picoin)
