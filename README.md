@@ -82,7 +82,7 @@ The implementation modifies only the `GetBlockSubsidy` function in Bitcoin Core:
 
 **📁 Modified File:** `src/validation.cpp`  
 **📝 Function:** `GetBlockSubsidy()`  
-**📏 Lines:** 1942 to 1979 (Bitcoin Core v25+)
+**📏 Lines:** 1942 to 1953 (Bitcoin Core v25+)
 
 ```cpp
 // MODIFICATION OF THE 100 CYCLES START
