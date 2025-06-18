@@ -1,79 +1,51 @@
-Bitcoin Core integration/staging tree
-=====================================
+# The Future of Bitcoin: Evolution or Extinction?
 
-https://bitcoincore.org
+The original Bitcoin protocol is a masterpiece of engineering. But it contains a silent flaw, programmed into our very DNA: **mortality**.
 
-For an immediately usable, binary version of the Bitcoin Core software, see
-https://bitcoincore.org/en/download/.
+## The Inevitable Crisis: Bitcoin's Great Filter
 
-What is Bitcoin Core?
----------------------
+The greatest threat to Bitcoin's future is not regulation, competition, or quantum computing. It is a simple, unavoidable biological fact: **people die.**
 
-Bitcoin Core connects to the Bitcoin peer-to-peer network to download and fully
-validate blocks and transactions. It also includes a wallet and graphical user
-interface, which can be optionally built.
+The original Bitcoin operates on the dangerous assumption that the transfer of private keys from one generation to the next will be a flawless process. The reality is the opposite.
 
-Further information about Bitcoin Core is available in the [doc folder](/doc).
+Consider a 140-year cycle—the approximate time for Bitcoin's original issuance to end.
 
-License
--------
+### The Two-Generation Challenge
+A 140-year cycle spans **practically two full human generations.** This imposes a near-impossible condition for survival: for an asset to remain in circulation, its private key must be successfully inherited not once, but **twice**—from the original owner to their heir, and again from the heir to the next generation.
 
-Bitcoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
-information or see https://opensource.org/license/MIT.
+### The Fragility of Inheritance
+Private key transfer is a complex, failure-prone process. Memories are lost, devices corrupt, accidents happen. The probability of a single inheritance event failing is already high. The probability of **two consecutive inheritance events** failing is drastically higher.
 
-Development Process
--------------------
+### The Cumulative Hemorrhage
+Even a small failure rate, compounded across two generations and multiplied by millions of owners, leads to an inescapable conclusion: a massive portion of the Bitcoin supply becomes permanently inaccessible with each cycle.
 
-The `master` branch is regularly built (see `doc/build-*.md` for instructions) and tested, but it is not guaranteed to be
-completely stable. [Tags](https://github.com/bitcoin/bitcoin/tags) are created
-regularly from release branches to indicate new official, stable release versions of Bitcoin Core.
+This is Bitcoin's **Great Filter**: a spiral of entropic loss that slowly transforms the network into a vast, useless **digital graveyard**. The liquid supply shrinks, liquidity vanishes, and the system petrifies, becoming a relic of value locked away forever.
 
-The https://github.com/bitcoin-core/gui repository is used exclusively for the
-development of the GUI. Its master branch is identical in all monotree
-repositories. Release branches and tags do not exist, so please do not fork
-that repository unless it is for development reasons.
+## The Solution: Bitcoin 2.0 - The Continuity Protocol
 
-The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
-and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
+The **Bitcoin 2.0 Continuity Protocol** is not an "improvement." It is the solution to this existential flaw.
 
-Testing
--------
+It acknowledges the inevitability of generational loss and introduces an elegant mechanism to ensure the network's survival and liquidity for millennia.
 
-Testing and code review is the bottleneck for development; we get more pull
-requests than we can review and test on short notice. Please be patient and help out by testing
-other people's pull requests, and remember this is a security-critical project where any mistake might cost people
-lots of money.
+### How It Works: The 100 Cycles of Rebirth
 
-### Automated Testing
+At the end of the original cycle in 2140, when Bitcoin would be fated to begin its decline, the Continuity Protocol activates the first of 100 new issuance cycles.
 
-Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to
-submit new unit tests for old code. Unit tests can be compiled and run
-(assuming they weren't disabled during the generation of the build system) with: `ctest`. Further details on running
-and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
+- **A Pulse of New Life:** Every ~140 years, the system reintroduces 21 million BTC, following the same halving curve as the original cycle.
+- **Replenishment, Not Inflation:** This is not inflation in the traditional sense. It is a **designed re-liquefaction mechanism** to offset the coins inevitably lost by the previous generations. It is how the network heals and renews itself.
+- **Perpetual Continuity:** This process ensures a stable liquid supply and a constant security incentive for miners, extending the functional operation of the network for over **17,600 years.**
 
-There are also [regression and integration tests](/test), written
-in Python.
-These tests can be run (if the [test dependencies](/test) are installed) with: `build/test/functional/test_runner.py`
-(assuming `build` is your build directory).
+## The Promise of Bitcoin 2.0
 
-The CI (Continuous Integration) systems make sure that every pull request is tested on Windows, Linux, and macOS.
-The CI must pass on all commits before merge to avoid unrelated CI failures on new pull requests.
+By solving the problem of monetary entropy, Bitcoin 2.0 transforms Satoshi's original promise into an enduring reality.
 
-### Manual Quality Assurance (QA) Testing
+- **✅ Longevity Guaranteed:** From a system fated to petrify, to a network designed to last for over 100 human generations.
+- **✅ Constant Liquidity:** Ensures Bitcoin remains a functional, circulating asset, not just a digital museum curiosity.
+- **✅ Unshakable Security:** Provides a clear and predictable "security budget" for miners, eliminating the uncertainty of the fee market.
+- **✅ Stability for the Future:** Creates a monetary base that can reliably serve the economy of our descendants for millennia.
 
-Changes should be tested by somebody other than the developer who wrote the
-code. This is especially important for large or high-risk changes. It is useful
-to add a test plan to the pull request description if testing the changes is
-not straightforward.
+---
 
-Translations
-------------
+The original Bitcoin showed us the path. Bitcoin 2.0 ensures there is a path to follow.
 
-Changes to translations as well as new translations can be submitted to
-[Bitcoin Core's Transifex page](https://www.transifex.com/bitcoin/bitcoin/).
-
-Translations are periodically pulled from Transifex and merged into the git repository. See the
-[translation process](doc/translation_process.md) for details on how this works.
-
-**Important**: We do not accept translation changes as GitHub pull requests because the next
-pull from Transifex would automatically overwrite them again.
+**We are not changing Bitcoin. We are ensuring it has a future.**
